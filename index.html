@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>headset</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <style>
+      body{
+        padding: 0;
+        margin: 0;
+      }
+        .list-group{
+            display: flex;
+            flex-direction: row;
+        }
+        .dropdown-item:hover{
+          background-color: beige;
+          color: black;
+  }
+        .btn-outline-dark:hover {
+            background-color: rgb(146, 144, 144);
+            color: azure;
+        
+        }
+
+        .hovereffect {
+width:100%;
+height:100%;
+float:left;
+overflow:hidden;
+position:relative;
+text-align:center;
+cursor:default;
+}
+
+.hovereffect .overlay {
+width:100%;
+height:100%;
+position:absolute;
+overflow:hidden;
+top:0;
+left:0;
+opacity:0;
+background-color:rgba(0,0,0,0.5);
+-webkit-transition:all .4s ease-in-out;
+transition:all .4s ease-in-out
+}
+
+.hovereffect img {
+display:block;
+position:relative;
+-webkit-transition:all .4s linear;
+transition:all .4s linear;
+}
+
+.hovereffect h2 {
+text-transform:uppercase;
+color:#fff;
+text-align:center;
+position:relative;
+font-size:17px;
+background:rgba(0,0,0,0.6);
+-webkit-transform:translatey(-100px);
+-ms-transform:translatey(-100px);
+transform:translatey(-100px);
+-webkit-transition:all .2s ease-in-out;
+transition:all .2s ease-in-out;
+padding:10px;
+}
+
+.hovereffect a.info {
+text-decoration:none;
+display:inline-block;
+text-transform:uppercase;
+color:#fff;
+border:1px solid #fff;
+background-color:transparent;
+opacity:0;
+filter:alpha(opacity=0);
+-webkit-transition:all .2s ease-in-out;
+transition:all .2s ease-in-out;
+margin:50px 0 0;
+padding:7px 14px;
+}
+
+.hovereffect a.info:hover {
+box-shadow:0 0 5px #fff;
+}
+
+.hovereffect:hover img {
+-ms-transform:scale(1.2);
+-webkit-transform:scale(1.2);
+transform:scale(1.2);
+}
+
+.hovereffect:hover .overlay {
+opacity:1;
+filter:alpha(opacity=100);
+}
+
+.hovereffect:hover h2,.hovereffect:hover a.info {
+opacity:1;
+filter:alpha(opacity=100);
+-ms-transform:translatey(0);
+-webkit-transform:translatey(0);
+transform:translatey(0);
+}
+
+.hovereffect:hover a.info {
+-webkit-transition-delay:.2s;
+transition-delay:.2s;
+} 
+    
+
+
+    </style>
+</head>
+<body>
+    
+    <!-- navbar -->
+    <nav class="navbar navbar-dark bg-warning"> 
+   
+      <div class="container-fluid">
+        <img src="" alt="" height="50px">
+    
+        <h3 class=" navbar-brand text-dark mt-1"><a class="text-dark " style="text-decoration: none;" tabindex="-1"  href="http://"></a></h3>
+      
+            
+    
+        
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+           
+          
+            
+            <span class="navbar-toggler-icon">
+                
+            </span>
+        </button>
+
+      </div>  
+
+        <div class="collapse mb-3 bg-warning  text-center" id="navbarToggleExternalContent" data-bs-theme="dark" style="  width: 100%;">
+          <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active text-dark" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active text-dark" href="#">Watch Video</a>
+                </li>
+                <li class="nav-item dropdown bg-warning rounded ">
+                  <a class="nav-link dropdown-toggle bg-warning text-dark active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    BLOCKS
+                  </a>
+                  <ul class="dropdown-menu bg-warning border-1 text-center">
+                    <li><a class="dropdown-item rounded text-dark"   href="#">Menu Pages</a></li>
+                    <li><a class="dropdown-item rounded text-dark"  href="#">Headers</a></li>
+                    <li><a class="dropdown-item rounded text-dark"  href="#">Images & Videos</a></li>
+                    <li><a class="dropdown-item rounded text-dark"  href="#">Shops</a></li>
+                    <li><a class="dropdown-item rounded text-dark"  href="#">Features</a></li>
+                    <li><a class="dropdown-item rounded text-dark"  href="#">Info</a></li>
+                    <li><a class="dropdown-item rounded text-dark"  href="#">TERMS & TESTIMONIAL</a></li>
+                    <li><a class="dropdown-item rounded text-dark"  href="#">FORMS & MAPS</a></li>
+                    <li><a class="dropdown-item rounded text-dark"  href="#">PRICING TABLES </a></li>
+                    <li><a class="dropdown-item rounded text-dark"  href="#">Tables</a></li>
+                    <li><a class="dropdown-item rounded text-dark"  href="#">Social</a></li>
+                    <li>
+                    
+                    </li>
+                    
+                  </ul>
+                </li>
+                <li class="nav-item dropdown bg-warning rounded ">
+                  <a class="nav-link active dropdown-toggle bg-warning text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    DEMO PAGE
+                  </a>
+                  <ul class="dropdown-menu bg-warning border-1 text-center">
+                    <li><a class="dropdown-item rounded text-dark"   href="#">Headphone Shop</a></li>
+                    <li><a class="dropdown-item text-dark"  href="#">Onlie Shop</a></li>
+                    <li><a class="dropdown-item text-dark"  href="#">Cafe</a></li>
+                  </ul>
+                </li>
+
+              </ul>
+            </div>
+  <!-- footer -->
+  <footer class="bg-warning text-center">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a
+        data-mdb-ripple-init
+          class="btn text-white btn-floating m-1"
+          style="background-color: #ffc107;"
+          href="#!"
+          role="button"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+  
+        <!-- Twitter -->
+        <a
+          data-mdb-ripple-init
+          class="btn text-white btn-floating m-1"
+          style="background-color: #ffc107;"
+          href="#!"
+          role="button"
+          ><i class="fab fa-twitter"></i
+        ></a>
+  
+        <!-- Google -->
+        <a
+          data-mdb-ripple-init
+          class="btn text-white btn-floating m-1"
+          style="background-color: #ffc107;"
+          href="#!"
+          role="button"
+          ><i class="fab fa-google"></i
+        ></a>
+  
+        <!-- Instagram -->
+        <a
+          data-mdb-ripple-init
+          class="btn text-white btn-floating m-1"
+          style="background-color: #ffc107;"
+          href="#!"
+          role="button"
+          ><i class="fab fa-instagram"></i
+        ></a>
+  
+        <!-- Linkedin -->
+        <a
+          data-mdb-ripple-init
+          class="btn text-white btn-floating m-1"
+          style="background-color: #ffc107;"
+          href="#!"
+          role="button"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+        <!-- Github -->
+        <a
+          data-mdb-ripple-init
+          class="btn text-white btn-floating m-1"
+          style="background-color: #ffc107;"
+          href="#!"
+          role="button"
+          ><i class="fab fa-github"></i
+        ></a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div>
+      <style>.btn:link,
+        .btn:visited {
+         text-transform: uppercase;
+         text-decoration: none;
+         background-color: #ffd24d;
+         color: #1b1b1b;
+         padding: 10px 30px;
+         border: 1px solid;
+         border-radius: 1000px;
+         display: inline-block;
+         transition: all .2s;
+         position: relative;
+        }
+        
+        .btn:hover {
+         transform: translateY(-5px);
+         box-shadow: 0 10px 20px rgba(27, 27, 27, .5);
+        }
+        
+        .btn:active {
+         transform: translateY(-3px);
+        }
+        
+        .btn::after {
+         content: "";
+         display: inline-block;
+         height: 100%;
+         width: 100%;
+         border-radius: 100px;
+         top: 0;
+         left: 0;
+         position: absolute;
+         z-index: -1;
+         transition: all .3s;
+        }
+        
+        .btn:hover::after {
+         background-color: rgb(209, 209, 209);
+         transform: scaleX(1.4) scaleY(1.5);
+         opacity: 0;
+        }</style>
+   
+<a href="#" class="btn">BUY NOW</a>
+
+    </div>
+    <!-- Copyright -->
+  </footer>
+     <!--  -->
+      </div>
+      </nav> 
+
+     <!-- Background image -->
+<div class="bg-image"style="background-image: url('https://ciptex.com/wp-content/uploads/2023/01/AdobeStock_545465885-scaled.jpeg'); width: 100%; height:600px;background-size:cover;">
+
+  <div class="bg-text text-center " style="padding-top:350px ; padding-right: 630px;">
+<h6 class="fw-bolder me-4" style="padding-left: 25px;  font-family: 'Montserrat', sans-serif;color: black; text-align: left;">THINKING OF BUYING A HEADPHONE?</h6>
+<h1 class="fw-bolder" style="font-family: 'Montserrat', sans-serif; color: black; padding-left: 25px; text-align: left; font-size: 50px;">Welcome to our <br> Headphones shop</h1>
+
+<style>.btn:link,
+  .btn:visited {
+   text-transform: uppercase;
+   text-decoration: none;
+   background-color: #ffd24d;
+   color: #1b1b1b;
+   padding: 10px 30px;
+   border: 1px solid;
+   border-radius: 1000px;
+   display: inline-block;
+   transition: all .2s;
+   position: relative;
+  }
+  
+  .btn:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 10px 20px rgba(27, 27, 27, .5);
+  }
+  
+  .btn:active {
+   transform: translateY(-3px);
+  }
+  
+  .btn::after {
+   content: "";
+   display: inline-block;
+   height: 100%;
+   width: 100%;
+   border-radius: 100px;
+   top: 0;
+   left: 0;
+   position: absolute;
+   z-index: -1;
+   transition: all .3s;
+  }
+  
+  .btn:hover::after {
+   background-color: rgb(209, 209, 209);
+   transform: scaleX(1.4) scaleY(1.5);
+   opacity: 0;
+  }</style>
+
+<a href="#" class="btn" style="margin-left: -270px;">Shopping Now</a>
+  </div>
+
+
+</div>
+<!-- Background image -->
+       
+<!-- first-banner  -->
+
+<div class="container p-4">
+
+  <h2 class="mb-4">Find a quality and right Headphones is not easy</h2>
+  <p class="" style="text-align: justify; font-family: 'Montserrat', sans-serif;">
+    <span class="fw-bold">Lorem ipsum dolor</span> sit amet consectetur, adipisicing elit. Animi architecto ipsam assumenda, accusantium odit facere nulla facilis fugiat unde quisquam labore quis voluptatibus consequatur nam saepe reprehenderit doloremque eum iusto! Lorem ipsum dolor sit amet unde quisquam labore quis voluptatibus consequatur nam saepe reprehenderit doloremque eum iusto! Lorem ipsum dol accusantium odit facere nulla facilis fugiat unde quisquam  sit amet consectetur adipisicing elit. Ducimus a consequuntur, placeat asperiores nobis quod eveniet, sint voluptate animi alias! Harum sit autem blanditiis maiores corporis, suscipit quaerat similique <a href="" style="text-decoration: none;">Learn More...</a>
+
+</div>
+
+
+<!-- second-banner -->
+
+ <div class="container-fluid bg-warning p-3">
+
+  <h2 class="text-center " style="color: rgb(255, 255, 255);">We will help you to choose the best headphones.</h2>
+
+ </div>
+<!-- sliders -->
+<style>.card {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  box-shadow: 0 0 0 5px #ffffff80;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card svg {
+  width: 48px;
+  fill: #333;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover .card__content {
+  transform: rotateX(0deg);
+}
+
+.card__title {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.card:hover svg {
+  scale: 0;
+}
+
+.card__description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
+}
+</style>
+
+
+
+<div class="container-fluid p-4 " style=" background-color: #ffffff; height: 400px; padding-bottom: -100px;">
+
+  <h3 class="fw-" style="margin-left: 150px;">Hottest headphones of the Month</h3>
+
+
+  <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active rounded rounded-4">
+        <div class="card-wrapper container-sm d-flex  justify-content-around rounded rounded-4 " style="padding: 80px;">
+
+        <div class="card" style="height: 240px;">
+  <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202108/Sony.png?size=690:388" alt="" height="250px">
+  <div class="card__content">
+    <p class="card__title">Sony WH-1000XM4</p>
+    <p class="card__description">As for the noise cancellation headphones, Sony offers discounts of up to Rs 7,000 on these models. Sony WH-CH710N, which usually retails for Rs 14,990, is now available for Rs 7,990.</p>
+    <br>
+    <button class="btn btn-warning">Buy Now</button>
+  </div>
+</div>
+
+
+
+<div class="card" style="height: 240px;">
+  <img src="https://www.soundguys.com/wp-content/uploads/2020/09/Sennheiser-HD-450BT-noise-cancelling-headphones-full.jpg" alt="" height="250px">
+  <div class="card__content">
+    <p class="card__title">Sennheiser HD 450BT</p>
+    <p class="card__description">Although Sennheiser nailed the sound quality, it failed to create a comfortable headset with spacious ear cups for a wide array of listeners. This set of noise canceling headphones does an okay job</p>
+    <br>
+    <button class="btn btn-warning">Buy Now</button>
+  </div>
+</div>
+
+<div class="card" style="height: 240px;">
+  <img src="https://i.rtings.com/assets/products/Dz9A3ujM/rode-nth-100/design-medium.jpg" alt="" height="250px">
+  <div class="card__content">
+    <p class="card__title">Rode NTH-100</p>
+    <p class="card__description">When Rode reached out to share that it would soon be releasing a pair of professional headphones that have been in the works for decades, I was excited, to say the least. When the NTH-100 arrived </p>
+    <br>
+    <button class="btn btn-warning">Buy Now</button>
+  </div>
+</div>
+
+          
+</div>
+</div>
+</div>
+</div>
+ </div>
+<!--  -->
+
+<!-- Grid-images -->
+
+<div class="container mt-4 p-4 rounded rounded-4 p-4 " style="background-color: rgba(161, 161, 161, 0.089);">
+
+  
+  <h2 class="" style="color: #000000;">Meet Our New Headphones</h2>
+  <br>
+
+
+  <div class="row m-4 p-2 ">
+
+    <div class="col-4 rounded-4 ">
+  
+  
+      <div class="hovereffect" style="width: 300px; height: 300px;">
+        <img class="img-responsive" src="https://images.pushsquare.com/07f7012532c31/ps5-audio-devices-5.large.jpg" width="350px" height="350px" alt="">
+        <div class="overlay">
+          <p class="text-white fw-bolder" style="margin-top: 150px;">SONY</p>
+          <a class="info btn btn-warning" href="#">SHOP THIS</a>
+        </div>
+    </div>
+    
+     
+      </div>
+        <div class="col-4 rounded-4 ">
+
+          <div class="hovereffect" style="width: 300px; height: 300px;">
+            <img class="img-responsive" src="https://media.wired.com/photos/6439a443feb0cdce093950ab/master/pass/Sennheiser-660S2-Review-Featured-Gear.jpg" width="450px" height="350px" alt="">
+            <div class="overlay">
+              <p class="text-white fw-bolder" style="margin-top: 150px;">SENNHEISER</p>
+              <a class="info btn btn-warning" href="#">SHOP THIS</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-4 rounded-4 ">
+
+      <div class="hovereffect" style="width: 300px; height: 300px;">
+        <img class="img-responsive" src="https://cdn.vox-cdn.com/thumbor/prwovOGtXPatFrfAWmPqiJtImR0=/0x0:2040x1360/2000x1333/filters:focal(1020x680:1021x681)/cdn.vox-cdn.com/uploads/chorus_asset/file/6690087/qc1_2040.0.jpg" width="500px" height="300px" alt="">
+        <div class="overlay">
+          <p class="text-white fw-bolder" style="margin-top: 150px;">BOSE</p>
+          <a class="info btn btn-warning" href="#">SHOP THIS</a>
+        </div>
+    </div>
+
+
+     
+      </div>
+
+
+    </div>
+    <br>
+
+    <div class="row m-4 p-2 ">
+
+      <div class="col-4 rounded-4 ">
+        <div class="hovereffect" style="width: 300px; height: 300px;">
+          <img class="img-responsive" src="https://www.dexerto.com/cdn-cgi/image/width=3840,quality=75,format=auto/https://editors.dexerto.com/wp-content/uploads/2022/07/21/jbl-hp-3.jpg" width="500px" height="300px" alt="">
+          <div class="overlay">
+            <p class="text-white fw-bolder" style="margin-top: 150px;">JBL</p>
+            <a class="info btn btn-warning" href="#">SHOP THIS</a>
+          </div>
+      </div>
+        </div>
+
+        
+          <div class="col-4 rounded-4 ">
+  
+            <div class="hovereffect" style="width: 300px; height: 300px;">
+              <img class="img-responsive" src="https://cdn.headphonecheck.com/wp-content/uploads/2019/04/tps_1281_376725_Juli09071-376725-1920x1080.jpg" width="450px" height="300px" alt="">
+              <div class="overlay">
+                <p class="text-white fw-bolder" style="margin-top: 150px;">AKG</p>
+                <a class="info btn btn-warning" href="#">SHOP THIS</a>
+              </div>
+          </div>
+      </div>
+  
+
+      <div class="col-4 rounded-4">
+  
+        <div class="hovereffect" style="width: 300px; height: 300px;">
+          <img class="img-responsive" src="https://www.soundguys.com/wp-content/uploads/2019/03/audio-technica-ath-m50xbt-logo.jpg" width="600px" height="350px" alt="">
+          <div class="overlay">
+            <p class="text-white fw-bolder" style="margin-top: 150px;">Audio-Technica</p>
+            <a class="info btn btn-warning" href="#">SHOP THIS</a>
+          </div>
+      </div>
+  
+        </div>
+
+  
+      </div>
+
+   
+    
+    </div>
+<!-- banner-4 -->
+    <div class="container-fluid mt-4 bg-warning  " style="padding: 25px;">
+      
+  <p class="text-white ps-4">HURRY UP LIMITED OFFER</p>
+  <h3 class="text-white ps-4 fw-bolder">
+    Like it? Pre-Order and get a discound <span class="btn-group"style="  display: inline-block;; ">
+      <button type="button"  class="btn btn-light rounded rounded-5" style="margin-left: 600px;">Learn More</button>
+    </span> 
+  </h3>
+
+
+</div>
+
+
+<!-- banner-5 -->
+<div class="container-fluid mt-4">
+
+  <h3 class="text-center">Why do you have to buy headphones from us?</h3>
+
+
+  <div class="row mt-4 ">
+    <div class="col-3">
+      <div class="card border border-warning">
+        <div class="card-body" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Eo_circle_yellow_number-1.svg/2048px-Eo_circle_yellow_number-1.svg.png); height: 150px; width: 200px; background-size: cover;">
+          <h5 class="card-title fw-bold">HIGH QUALITY</h5>
+          <p class="card-text">Lorem ipsum dol, amet consectetur adipisicing elit. Excepturi, neque. Fugit laboriosam, <a href="#" class="text-secondary" style="text-decoration: none;">Learn More...</a></p>
+          
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card border border-warning">
+        <div class="card-body" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Eo_circle_yellow_number-2.svg/1200px-Eo_circle_yellow_number-2.svg.png); height: 150px; width: 200px; background-size: cover;">
+          <h5 class="card-title fw-bold">ORIGINALDEVICE</h5>
+          <p class="card-text">Lorem ipsum dol, amet consectetur adipisicing elit. Excepturi, neque. Fugit laboriosam, <a href="#" class="text-secondary" style="text-decoration: none;">Learn More...</a></p>
+          
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card border border-warning">
+        <div class="card-body" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Eo_circle_yellow_number-3.svg/480px-Eo_circle_yellow_number-3.svg.png); height: 150px; width: 200px; background-size: cover;">
+          <h5 class="card-title fw-bold">YEAR WARRENTY</h5>
+          <p class="card-text">Lorem ipsum dol, amet consectetur adipisicing elit. Excepturi, neque. Fugit laboriosam, <a href="#" class="text-secondary" style="text-decoration: none;">Learn More...</a></p>
+          
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card border border-warning">
+        <div class="card-body" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Eo_circle_yellow_number-4.svg/1200px-Eo_circle_yellow_number-4.svg.png); height: 150px; width: 200px; background-size: cover;">
+          <h5 class="card-title fw-bold">WEEK TO CHECK</h5>
+          <p class="card-text">Lorem ipsum dol, amet consectetur adipisicing elit. Excepturi, neque. Fugit laboriosam, <a href="#" class="text-secondary" style="text-decoration: none;">Learn More...</a></p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!--  -->
+
+<!-- banner-6 -->
+
+<div class="container-fluid " style="margin-top: 50px;">
+
+  <p class="fw-bold text-secondary text-center mt-2 ">STILL NOT CONVINCED</p>
+  <h1 class="fw-bolder text-center">Visit us see yourself!</h1>
+  <br>
+</div>
+<div class="container-fluid"> 
+ <iframe class="ms-3 " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23061.293714094907!2d7.403855378937814!3d43.73835390715857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cdc28900585743%3A0xa778186d9e02ffb3!2s98000%20Monaco!5e0!3m2!1sen!2sin!4v1705222536672!5m2!1sen!2sin" width="1300" height="450" style="border:0; background-size: cover;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+</div>
+ 
+<!-- footer -->
+ 
+<footer class="text-center bg-body-tertiary">
+  <!-- Grid container -->
+  <div class="container pt-4">
+    <!-- Section: Social media -->
+    <img style="display: inline-block; margin-right: 50px;" src="https://images.unsplash.com/photo-1505751171710-1f6d0ace5a85?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" height="65px" width="90px" alt="">
+   <p class="" style="display: inline-block; margin-top: 20px;"  >© 2020 All the right are reserved for Terms & Use of Privacy <br>Policy</p> 
+   <section class="mb-4 ms-4" style="display: inline-block; ">
+
+      
+      <!-- Facebook -->
+      <a
+        data-mdb-ripple-init
+        class="btn btn-link btn-floating btn-sm text-body-light m-1 bg-warning rounded-5 "
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a
+        data-mdb-ripple-init
+        class="btn btn-link btn-floating btn-sm text-body m-1 bg-warning rounded-5 "
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-twitter"></i
+      ></a>
+
+      <!-- Google -->
+      <a
+        data-mdb-ripple-init
+        class="btn btn-link btn-floating btn-sm text-body m-1 bg-warning rounded-5 "
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-google"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a
+        data-mdb-ripple-init
+        class="btn btn-link btn-floating btn-sm text-body m-1 bg-warning rounded-5 "
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-instagram"></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a
+        data-mdb-ripple-init
+        class="btn btn-link btn-floating btn-sm text-body m-1 bg-warning rounded-5"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="warning"
+        ><i class="fab fa-linkedin"></i
+      ></a>
+      <!-- Github -->
+      <a
+        data-mdb-ripple-init
+        class="btn btn-link btn-floating btn-sm text-body m-1 bg-warning rounded-5 "
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-github"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+
+  <!-- Copyright -->
+</footer>
+
+
+
+
+<!--  -->
+
+
+       
+      
+
+  
+   
+</body>
+</html>
